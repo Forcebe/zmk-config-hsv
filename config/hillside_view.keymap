@@ -40,21 +40,20 @@
                             &trans &trans &trans &trans                 &kp LPAR  &mo RPAR &kp UNDER &kp GT
               >;
       };
-
     number_layer {
   // -----------------------------------------------------------------------------------------
-  // |  * |  [  |  7  |  8  |  9  |  ]  |      |    |     |     |     |     |     |
-  // |  / |  ;  |  4  |  5  |  6  |  =  |      |    | SFT | CMD | OPT | CTR |     |
-  // |  % |  `  |  1  |  2  |  3  |  \  |      |    |     |     |     |     |     |
-  //                        |  0  |                 |     |
-  //             | ,  |  -  |  .  |  >  |      |    |     |     |     |
+  // |  > |  /  |  7  |  8  |  9  |  -  |      |    |     |     |     |     |     |
+  // |  ? |  *  |  4  |  5  |  6  |  =  |      |    | SFT | CMD | OPT | CTR |     |
+  // |  < |  %  |  1  |  2  |  3  |  +  |      |    |     |     |     |     |     |
+  //                        | ENT |                 |     |
+  //             | ,  |  0  |  .  | BSP |      |    |     |     |     |
       label = "NUMBER";
       bindings = <
-   &kp ASTRK &kp LBKT  &kp N7 &kp N8 &kp N9 &kp RBKT             &trans    &trans    &trans   &trans   &trans     &trans 
-   &kp FSLH  &kp SEMI  &kp N4 &kp N5 &kp N6 &kp EQUAL            &trans    &kp LSFT  &kp LGUI &kp LALT &kp LCTRL  &trans
-   &kp PRCNT &kp GRAVE &kp N1 &kp N2 &kp N3 &mo BSLH             &trans    &trans    &trans   &trans   &trans     &trans 
-                                     &kp N0                                &trans
-                 &kp COMMA &kp MINUS &kp PERIOD &kp GT           &trans    &trans    &trans   &trans 
+   &kp GT     &kp KP_DIVIDE   &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp KP_MINUS            &trans    &trans    &trans   &trans   &trans     &trans 
+   &kp QMARK  &kp KP_MULTIPLY &kp KP_N4 &kp KP_N5 &kp KP_N6 &kp EQUAL               &trans    &kp LSFT  &kp LGUI &kp LALT &kp LCTRL  &trans
+   &kp LT     &kp PRCNT       &kp KP_N1 &kp KP_N2 &kp KP_N3 &mo KP_PLUS             &trans    &trans    &trans   &trans   &trans     &trans 
+                                                  &kp KP_N0                                   &trans
+                              &kp COMMA &kp KP_N0 &kp KP_DOT &kp BSPC               &trans    &trans    &trans   &trans 
               >;
       };
 
@@ -74,7 +73,6 @@
                             &trans &trans &trans &trans                 &kp LPAR  &mo RPAR &kp UNDER &kp GT
               >;
       };
-
     function_layer {
   // -----------------------------------------------------------------------------------------
   // |    | F12 |  F7 |  F8 |  F9 |    PSCRN    |          |    |     |     |     |     |     |
@@ -84,11 +82,11 @@
   //             |    | APP | SPC | TAB |                  |    |     |     |     |
       label = "FUNCTION";
       bindings = <
-   &trans &kp F12 &kp F7 &kp F8 &kp F9 &kp PSCRN                   &trans    &trans    &trans   &trans   &trans     &trans 
-   &trans &kp F11 &kp F4 &kp F5 &kp F6 &kp SLCK                    &trans    &kp LSFT  &kp LGUI &kp LALT &kp LCTRL  &trans
-   &trans &kp F10 &kp F1 &kp F2 &kp F3 &mo PAUSE_BREAK             &trans    &trans    &trans   &trans   &trans     &trans 
-                                &kp N0                                       &trans
-               &trans &kp K_APP &kp SPC &kp TAB                    &trans    &trans    &trans   &trans 
+   &trans &kp PSCRN       &kp F7 &kp F8 &kp F9 &kp F12                   &trans    &trans    &trans   &trans   &trans     &trans 
+   &trans &kp SLCK        &kp F4 &kp F5 &kp F6 &kp F11                   &trans    &kp LSFT  &kp LGUI &kp LALT &kp LCTRL  &trans
+   &trans &kp PAUSE_BREAK &kp F1 &kp F2 &kp F3 &mo F10                   &trans    &trans    &trans   &trans   &trans     &trans 
+                                &kp N0                                             &trans
+               &trans &kp K_APP &kp SPC &kp TAB                          &trans    &trans    &trans   &trans 
               >;
       };
 
