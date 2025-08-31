@@ -115,14 +115,14 @@
       };
     function_layer {
   // -----------------------------------------------------------------------------------------
-  // |    | F12 |  F7 |  F8 |  F9 |    PSCRN    |          |    |     |     |     |     |     |
-  // |    | F11 |  F4 |  F5 |  F6 |    SLCK     |          |    | SFT | CMD | OPT | CTR |     |
-  // |    | F10 |  F1 |  F2 |  F3 | PAUSE_BREAK |          |    |     |     |     |     |*****|
+  // |BT_CLR| F12 |  F7 |  F8 |  F9 |    PSCRN    |          |    |     |     |     |     |     |
+  // |      | F11 |  F4 |  F5 |  F6 |    SLCK     |          |    | SFT | CMD | OPT | CTR |     |
+  // |      | F10 |  F1 |  F2 |  F3 | PAUSE_BREAK |          |    |     |     |     |     |*****|
   //                        |  0  |                             |     |
   //             |    | APP | SPC | TAB |                  |    |     |     |     |
       display-name = "Func.";
       bindings = <
-   &trans &kp PSCRN       &kp F7 &kp F8 &kp F9 &kp F12                   &trans    &trans      &trans   &trans   &trans     &trans 
+   BT_CLR &kp PSCRN       &kp F7 &kp F8 &kp F9 &kp F12                   &trans    &trans      &trans   &trans   &trans     &trans 
    &trans &kp SLCK        &kp F4 &kp F5 &kp F6 &kp F11                   &trans    &kp LSHIFT  &kp LGUI &kp LALT &kp LCTRL  &trans
    &trans &kp PAUSE_BREAK &kp F1 &kp F2 &kp F3 &kp F10                   &trans    &trans      &trans   &trans   &trans     &trans 
                                 &kp N0                                             &trans
