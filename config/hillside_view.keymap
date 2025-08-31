@@ -1,5 +1,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
 
 
 //   // Key numbers
@@ -116,8 +117,8 @@
     function_layer {
   // -----------------------------------------------------------------------------------------
   // |BT_CLR| F12 |  F7 |  F8 |  F9 |    PSCRN    |          |    |     |     |     |     |     |
-  // |      | F11 |  F4 |  F5 |  F6 |    SLCK     |          |    | SFT | CMD | OPT | CTR |     |
-  // |      | F10 |  F1 |  F2 |  F3 | PAUSE_BREAK |          |    |     |     |     |     |*****|
+  // |    | F11 |  F4 |  F5 |  F6 |    SLCK     |          |    | SFT | CMD | OPT | CTR |     |
+  // |    | F10 |  F1 |  F2 |  F3 | PAUSE_BREAK |          |    |     |     |     |     |*****|
   //                        |  0  |                             |     |
   //             |    | APP | SPC | TAB |                  |    |     |     |     |
       display-name = "Func.";
