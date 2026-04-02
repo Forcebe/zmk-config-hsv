@@ -65,7 +65,7 @@ layers:
   - Opt
   - Cmd
   - Shift
-  - {t: ▽, type: trans}
+  - '='
   - ':'
   - $
   - '%'
@@ -96,11 +96,11 @@ layers:
   - '>'
   Number:
   - '>'
-  - KP DIVIDE
-  - KP 7
-  - KP 8
-  - KP 9
-  - KP MINUS
+  - /
+  - '7'
+  - '8'
+  - '9'
+  - MINUS
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -108,10 +108,10 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - '?'
-  - KP MULTIPLY
-  - KP 4
-  - KP 5
-  - KP 6
+  - '*'
+  - '4'
+  - '5'
+  - '6'
   - '='
   - {t: ▽, type: trans}
   - Shift
@@ -121,10 +121,10 @@ layers:
   - {t: ▽, type: trans}
   - <
   - '%'
-  - KP 1
-  - KP 2
-  - KP 3
-  - KP PLUS
+  - '1'
+  - '2'
+  - '3'
+  - +
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -134,8 +134,8 @@ layers:
   - ENTER
   - {t: ▽, type: trans}
   - ','
-  - KP 0
-  - KP DOT
+  - '0'
+  - .
   - Bksp
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
