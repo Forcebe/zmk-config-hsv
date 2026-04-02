@@ -1,4 +1,4 @@
-layout: {qmk_info_json: config/hsv_layout.json}
+layout: {zmk_keyboard: hillside_view}
 layers:
   Default:
   - ESC
