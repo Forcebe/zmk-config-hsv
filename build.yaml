@@ -13,9 +13,9 @@
 #
 ---
 include:
-  - board: nice_nano_v2/nrf52840
+  - board: nice_nano/nrf52840/zmk
     shield: hillside_view_left nice_view
-  - board: nice_nano_v2/nrf52840
+  - board: nice_nano/nrf52840/zmk
     shield: hillside_view_right nice_view
-  - board: nice_nano_v2/nrf52840
+  - board: nice_nano/nrf52840/zmk
     shield: settings_reset
