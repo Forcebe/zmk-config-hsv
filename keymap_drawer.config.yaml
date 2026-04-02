@@ -1,0 +1,73 @@
+draw_config:
+  dark_mode: true
+  draw_key_sides: true
+  append_colon_to_layer_header: false
+  svg_extra_style: |
+    svg.keymap { background-color: #1a1a2e; }
+    text.label { stroke: none; }
+    /* color-coded layer buttons on default layer */
+    .layer-Default rect.key.nav { fill: #2d4a6f; }
+    .layer-Default rect.key.sym { fill: #4a2d6f; }
+    .layer-Default rect.key.num { fill: #6f5a2d; }
+    .layer-Default rect.key.fnc { fill: #2d6f4a; }
+    .layer-Default text.key.nav, .layer-Default text.key.sym,
+    .layer-Default text.key.num, .layer-Default text.key.fnc { fill: #fff; }
+    /* color-coded layer titles */
+    .layer-Navigation text.label { fill: #60a0e0; }
+    .layer-Symbol text.label { fill: #b088e0; }
+    .layer-Number text.label { fill: #e0c060; }
+    .layer-Function text.label { fill: #60e0a0; }
+    /* held key colors matching layer */
+    .layer-Navigation rect.held { fill: #2d4a6f; }
+    .layer-Symbol rect.held { fill: #4a2d6f; }
+    .layer-Number rect.held { fill: #6f5a2d; }
+    .layer-Function rect.held { fill: #2d6f4a; }
+parse_config:
+  zmk_keycode_map:
+    LSHFT: Shift
+    LCTRL: Ctrl
+    LALT: Opt
+    LGUI: Cmd
+    LSHIFT: Shift
+    SQT: "'"
+    SEMI: ;
+    BSLH: \
+    FSLH: /
+    COMMA: ","
+    DOT: .
+    LBRC: "{"
+    RBRC: "}"
+    LPAR: (
+    RPAR: )
+    AMPS: "&"
+    ASTRK: "*"
+    COLON: ":"
+    DLLR: $
+    PRCNT: "%"
+    CARET: ^
+    PLUS: +
+    GRAVE: "`"
+    EXCL: "!"
+    AT: "@"
+    HASH: "#"
+    PIPE: "|"
+    LT: <
+    GT: ">"
+    UNDER: _
+    QMARK: "?"
+    EQUAL: "="
+    LEFT_BRACKET: "["
+    RIGHT_BRACKET: "]"
+    BSPC: Bksp
+    DEL: Del
+    PSCRN: PrtSc
+    SLCK: ScrLk
+    PAUSE_BREAK: Pause
+  raw_binding_map:
+    "&bt BT_CLR": BT Clr
+    "&bt BT_NXT": BT Next
+    "&bt BT_PRV": BT Prev
+    "&mo 1": {t: Sym, type: sym}
+    "&mo 2": {t: Num, type: num}
+    "&mo 3": {t: Nav, type: nav}
+    "&mo 4": {t: Func, type: fnc}

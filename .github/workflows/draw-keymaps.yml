@@ -1,0 +1,20 @@
+name: Draw keymaps
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "config/*.keymap"
+      - "config/*.dtsi"
+      - "keymap_drawer.config.yaml"
+
+jobs:
+  draw:
+    uses: caksoylar/keymap-drawer/.github/workflows/draw-zmk.yml@main
+    permissions:
+      contents: write
+    with:
+      keymap_patterns: "config/*.keymap"
+      config_path: "keymap_drawer.config.yaml"
+      output_folder: "keymap-drawer"
+      draw_args: "hillside_view:'-j config/hsv_layout.json'"
+      parse_args: "hillside_view:'-l Default Symbol Number Navigation Function'"

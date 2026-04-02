@@ -1,0 +1,237 @@
+layout: {qmk_info_json: config/hsv_layout.json}
+layers:
+  Default:
+  - ESC
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - \
+  - Shift
+  - {t: A, h: Ctrl}
+  - {t: S, h: Opt}
+  - {t: D, h: Cmd}
+  - {t: F, h: Shift}
+  - G
+  - H
+  - {t: J, h: Shift}
+  - {t: K, h: Cmd}
+  - {t: L, h: Opt}
+  - {t: ;, h: Ctrl}
+  - ''''
+  - {t: Nav, type: nav}
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - N
+  - M
+  - ','
+  - .
+  - /
+  - {t: Func, type: fnc}
+  - ENTER
+  - TAB
+  - '['
+  - SPACE
+  - {t: Sym, type: sym}
+  - Bksp
+  - Del
+  - {t: Num, type: num}
+  - SPACE
+  - ']'
+  Symbol:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '{'
+  - (
+  - '&'
+  - '*'
+  - )
+  - '}'
+  - {t: ▽, type: trans}
+  - Ctrl
+  - Opt
+  - Cmd
+  - Shift
+  - {t: ▽, type: trans}
+  - ':'
+  - $
+  - '%'
+  - ^
+  - +
+  - \
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '`'
+  - '!'
+  - '@'
+  - '#'
+  - '|'
+  - /
+  - {t: ▽, type: trans}
+  - <
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - (
+  - )
+  - _
+  - '>'
+  Number:
+  - '>'
+  - KP DIVIDE
+  - KP 7
+  - KP 8
+  - KP 9
+  - KP MINUS
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '?'
+  - KP MULTIPLY
+  - KP 4
+  - KP 5
+  - KP 6
+  - '='
+  - {t: ▽, type: trans}
+  - Shift
+  - Cmd
+  - Opt
+  - Ctrl
+  - {t: ▽, type: trans}
+  - <
+  - '%'
+  - KP 1
+  - KP 2
+  - KP 3
+  - KP PLUS
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ENTER
+  - {t: ▽, type: trans}
+  - ','
+  - KP 0
+  - KP DOT
+  - Bksp
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  Navigation:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - HOME
+  - UP
+  - END
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Ctrl
+  - Opt
+  - Cmd
+  - Shift
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - LEFT
+  - DOWN
+  - RIGHT
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - HOME
+  - PG DN
+  - PG UP
+  - END
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ENTER
+  - Bksp
+  - Del
+  - {t: ▽, type: trans}
+  Function:
+  - BT Clr
+  - PrtSc
+  - F7
+  - F8
+  - F9
+  - F12
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - BT Next
+  - ScrLk
+  - F4
+  - F5
+  - F6
+  - F11
+  - {t: ▽, type: trans}
+  - Shift
+  - Cmd
+  - Opt
+  - Ctrl
+  - {t: ▽, type: trans}
+  - BT Prev
+  - Pause
+  - F1
+  - F2
+  - F3
+  - F10
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '0'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - APP
+  - SPACE
+  - TAB
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
