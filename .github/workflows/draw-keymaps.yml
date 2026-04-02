@@ -1,14 +1,13 @@
 name: Draw keymaps
 on:
   workflow_dispatch:
-  push:
-    paths:
-      - "config/*.keymap"
-      - "config/*.dtsi"
-      - "keymap_drawer.config.yaml"
+  workflow_run:
+    workflows: [build]
+    types: [completed]
 
 jobs:
   draw:
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
     uses: caksoylar/keymap-drawer/.github/workflows/draw-zmk.yml@main
     permissions:
       contents: write
