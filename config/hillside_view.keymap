@@ -109,16 +109,16 @@
       bindings = <
     &trans    &trans    &trans   &trans   &trans     &trans             &trans    &kp HOME  &kp UP    &kp END   &trans     &trans
     &trans    &kp LCTRL &kp LALT &kp LGUI &kp LSHFT  &trans             &trans    &kp LEFT  &kp DOWN  &kp RIGHT &trans     &trans
-    &trans    &trans    &trans   &trans   &trans     &trans             &trans    &kp HOME  &kp PG_DN &kp PG_UP &kp END    &trans
+    &trans    &trans    &trans   &trans   &trans     &trans             &kp INS   &kp HOME  &kp PG_DN &kp PG_UP &kp END    &trans
                                           &trans                                  &trans
                             &trans &trans &trans &trans                 &kp ENTER &kp BSPC  &kp DEL   &trans
               >;
       };
     function_layer {
   // -----------------------------------------------------------------------------------------
-  // |BT_CLR| F12 |  F7 |  F8 |  F9 |    PSCRN    |          |    |     |     |     |     |     |
-  // |      | F11 |  F4 |  F5 |  F6 |    SLCK     |          |    | SFT | CMD | OPT | CTR |     |
-  // |      | F10 |  F1 |  F2 |  F3 | PAUSE_BREAK |          |    |     |     |     |     |*****|
+  // |BT_CLR| PSCRN |  F7 |  F8 |  F9 |     F12     |          |    |     |     |     |     |     |
+  // |BT_NXT| SLCK  |  F4 |  F5 |  F6 |     F11     |          |    | SFT | CMD | OPT | CTR |     |
+  // |BT_PRV| PAUSE |  F1 |  F2 |  F3 |     F10     |          |    |     |     |     |     |*****|
   //                        |  0  |                             |     |
   //             |    | APP | SPC | TAB |                  |    |     |     |     |
       display-name = "Func.";
