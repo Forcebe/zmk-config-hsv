@@ -42,6 +42,24 @@
 };
 
 / {
+  combos {
+    compatible = "zmk,combos";
+
+    combo_caps_word {
+      key-positions = <16 19>; // F + J
+      bindings = <&caps_word>;
+      timeout-ms = <50>;
+    };
+
+    combo_tmux {
+      key-positions = <13 21>; // A + L
+      bindings = <&kp LC(B)>;
+      timeout-ms = <50>;
+    };
+  };
+};
+
+/ {
   keymap {
     compatible = "zmk,keymap";
 
@@ -100,15 +118,15 @@
 
     navigation_layer {     
   // -----------------------------------------------------------------------------------------
-  // |    |     |     |     |     |     |      |     | HOME |   ⬆  |  END |     |     |
-  // |    | CTR | OPT | CMD | SFT |     |      |     |  <-  |   ⬇  |  ->  |     |     |
+  // |    |     |     |     |     |     |      | HOME|      |      |  END |     |     |
+  // |    | CTR | OPT | CMD | SFT |     |      |  <- |   ⬇  |   ⬆  |  ->  |     |     |
   // |****|     |     |     |     |     |      | INS | HOME | PGDN | PGUP | END |     |
   //                        |     |                  |      |
   //             |    |     |     |     |      | ENT | BSP  | DEL  |      |
       display-name = "Nav.";
       bindings = <
-    &trans    &trans    &trans   &trans   &trans     &trans             &trans    &kp HOME  &kp UP    &kp END   &trans     &trans
-    &trans    &kp LCTRL &kp LALT &kp LGUI &kp LSHFT  &trans             &trans    &kp LEFT  &kp DOWN  &kp RIGHT &trans     &trans
+    &trans    &trans    &trans   &trans   &trans     &trans             &kp HOME  &trans    &trans    &kp END   &trans     &trans
+    &trans    &kp LCTRL &kp LALT &kp LGUI &kp LSHFT  &trans             &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &trans     &trans
     &trans    &trans    &trans   &trans   &trans     &trans             &kp INS   &kp HOME  &kp PG_DN &kp PG_UP &kp END    &trans
                                           &trans                                  &trans
                             &trans &trans &trans &trans                 &kp ENTER &kp BSPC  &kp DEL   &trans
