@@ -148,9 +148,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - HOME
-  - UP
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - END
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -160,9 +160,9 @@ layers:
   - Cmd
   - Shift
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - LEFT
   - DOWN
+  - UP
   - RIGHT
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -235,3 +235,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+combos:
+- p: [16, 19]
+  k: '&caps_word'
+- p: [13, 21]
+  k: Ctl+B
