@@ -238,7 +238,5 @@ layers:
 combos:
 - p: [16, 19]
   k: Caps Word
-  l: [Default]
 - p: [13, 22]
   k: ⌃B Tmux
-  l: [Default]
