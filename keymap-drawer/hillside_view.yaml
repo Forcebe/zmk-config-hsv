@@ -237,6 +237,8 @@ layers:
   - {t: ▽, type: trans}
 combos:
 - p: [16, 19]
-  k: '&caps_word'
-- p: [13, 21]
-  k: Ctl+B
+  k: Caps Word
+  l: [Default]
+- p: [13, 22]
+  k: ⌃B Tmux
+  l: [Default]
