@@ -8,12 +8,45 @@ on:
 jobs:
   draw:
     if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
-    uses: caksoylar/keymap-drawer/.github/workflows/draw-zmk.yml@main
+    runs-on: ubuntu-latest
     permissions:
       contents: write
-    with:
-      keymap_patterns: "config/*.keymap"
-      config_path: "keymap_drawer.config.yaml"
-      output_folder: "keymap-drawer"
-      draw_args: "hillside_view:'-j config/hsv_layout.json'"
-      parse_args: "hillside_view:'-l Default Symbol Number Navigation Function'"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install keymap-drawer
+        run: pip install keymap-drawer
+
+      - name: Parse keymap
+        run: |
+          keymap -c keymap_drawer.config.yaml parse \
+            -z config/hillside_view.keymap \
+            -l Default Symbol Number Navigation Function \
+            > keymap-drawer/hillside_view.yaml
+
+      - name: Draw keymap
+        run: |
+          keymap -c keymap_drawer.config.yaml draw \
+            --keys-only \
+            keymap-drawer/hillside_view.yaml \
+            -j config/hsv_layout.json \
+            > keymap-drawer/hillside_view.svg
+
+      - name: Add combo legend
+        run: ./scripts/add-combo-legend.sh keymap-drawer/hillside_view.svg
+
+      - name: Commit updated images
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add keymap-drawer/
+          if ! git diff --cached --quiet; then
+            git commit -m "keymap-drawer render"
+            git push
+          fi

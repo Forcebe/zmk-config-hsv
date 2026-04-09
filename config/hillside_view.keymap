@@ -49,12 +49,14 @@
       key-positions = <16 19>; // F + J
       bindings = <&caps_word>;
       timeout-ms = <50>;
+      layers = <0>;
     };
 
     combo_tmux {
-      key-positions = <13 21>; // A + L
+      key-positions = <13 22>; // A + ;
       bindings = <&kp LC(B)>;
       timeout-ms = <50>;
+      layers = <0>;
     };
   };
 };

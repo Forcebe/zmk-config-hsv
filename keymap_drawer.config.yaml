@@ -22,6 +22,13 @@ draw_config:
     .layer-Symbol rect.held { fill: #4a2d6f; }
     .layer-Number rect.held { fill: #6f5a2d; }
     .layer-Function rect.held { fill: #2d6f4a; }
+    /* combo key color-coding on default layer */
+    /* caps word (F+J): amber */
+    .layer-Default .keypos-16 rect.key,
+    .layer-Default .keypos-19 rect.key { fill: #4a3a1a; stroke: #c89b40; }
+    /* tmux leader (A+L): teal */
+    .layer-Default .keypos-13 rect.key,
+    .layer-Default .keypos-22 rect.key { fill: #1a3a3a; stroke: #40a0a0; }
 parse_config:
   zmk_keycode_map:
     LSHFT: Shift
@@ -64,6 +71,8 @@ parse_config:
     SLCK: ScrLk
     PAUSE_BREAK: Pause
   raw_binding_map:
+    "&caps_word": Caps Word
+    "&kp LC(B)": "⌃B Tmux"
     "&bt BT_CLR": BT Clr
     "&bt BT_NXT": BT Next
     "&bt BT_PRV": BT Prev
