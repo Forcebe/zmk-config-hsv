@@ -7,7 +7,7 @@
 - `keymap_drawer.config.yaml` - keymap-drawer config (key name mappings, draw styling, CSS)
 - `keymap-drawer/hillside_view.yaml` - parsed keymap YAML (auto-generated)
 - `keymap-drawer/hillside_view.svg` - rendered SVG (auto-generated)
-- `scripts/add-combo-legend.sh` - post-processes SVG to inject combo legend
+- `scripts/add-combo-legend.py` - post-processes SVG to inject combo key highlighting and legend
 - `.github/workflows/draw-keymaps.yml` - renders keymap diagram (runs after firmware build)
 
 ## Rendering the keymap locally
@@ -26,38 +26,27 @@ keymap -c keymap_drawer.config.yaml draw \
   -j config/hsv_layout.json \
   > keymap-drawer/hillside_view.svg
 
-./scripts/add-combo-legend.sh keymap-drawer/hillside_view.svg
+python3 scripts/add-combo-legend.py keymap-drawer/hillside_view.yaml keymap-drawer/hillside_view.svg
 ```
 
-## What requires manual updates when changing combos
+## Combo display pipeline
 
-The combo display uses color-coded keys and an inline legend instead of keymap-drawer's default combo boxes. This means three files must be kept in sync manually whenever combos change:
+Combos are displayed as color-coded trigger keys on the Default layer with an inline legend between the Default and Symbol layers. This is fully automatic — no manual CSS or legend updates needed when combos change.
 
-| File | What to update |
-|---|---|
-| `config/hillside_view.keymap` | Combo `key-positions`, `bindings`, `layers` |
-| `keymap_drawer.config.yaml` | CSS selectors under `svg_extra_style` targeting `.layer-Default .keypos-N rect.key` with the correct key position numbers and colors |
-| `scripts/add-combo-legend.sh` | Legend text (e.g. "A + ; → ⌃B Tmux Leader"), rect fill/stroke colors, and text fill colors to match the CSS |
+`scripts/add-combo-legend.py` reads the parsed YAML, discovers all combos, auto-assigns colors from a palette, and injects:
+- CSS to highlight trigger keys on the Default layer
+- An SVG legend showing key names and combo actions
 
-If you only change the keymap without updating the other two, the key highlighting and legend will be stale or wrong.
+### When changing combos
 
-### Current combos
-
-| Combo | Keys | Positions | Color |
-|---|---|---|---|
-| Caps Word | F + J | 16, 19 | Amber (`#4a3a1a` fill, `#c89b40` stroke) |
-| Tmux Leader (⌃B) | A + ; | 13, 22 | Teal (`#1a3a3a` fill, `#40a0a0` stroke) |
-
-### What does NOT need manual updates
-
-- Adding/removing/reordering keys within layers - the parse + draw pipeline handles this automatically
-- Layer styling (held keys, layer button colors) - driven by CSS classes that keymap-drawer assigns automatically
-- Key name display (e.g. `LGUI` → `Cmd`) - controlled by `zmk_keycode_map` and `raw_binding_map` in the config
+Only `config/hillside_view.keymap` needs editing. The drawing pipeline handles everything else:
+- Add display names for new bindings via `raw_binding_map` in `keymap_drawer.config.yaml` (otherwise the raw ZMK binding name is shown)
+- Combos are active on all layers in firmware; the diagram shows them on the Default layer only via `--keys-only` draw + the legend script
 
 ## Conventions
 
 - Layers ordered: Default, Symbol, Number, Navigation, Function
 - Layer buttons on Default are color-coded: blue=Nav, purple=Sym, amber=Num, green=Func
-- Combos always use `layers = <0>;` to restrict to Default layer only
+- Combos are active on all layers; displayed on Default layer only in the diagram
 - macOS modifier names: Cmd, Opt, Ctrl, Shift
-- Draw uses `--keys-only` flag; combo visualization is handled entirely by CSS + legend script
+- Draw uses `--keys-only` flag; combo visualization is handled by `add-combo-legend.py`

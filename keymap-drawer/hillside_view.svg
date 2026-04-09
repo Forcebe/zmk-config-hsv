@@ -152,13 +152,14 @@ text.label { stroke: none; }
 .layer-Symbol rect.held { fill: #4a2d6f; }
 .layer-Number rect.held { fill: #6f5a2d; }
 .layer-Function rect.held { fill: #2d6f4a; }
-/* combo key color-coding on default layer */
-/* caps word (F+J): amber */
-.layer-Default .keypos-16 rect.key,
-.layer-Default .keypos-19 rect.key { fill: #4a3a1a; stroke: #c89b40; }
-/* tmux leader (A+L): teal */
-.layer-Default .keypos-13 rect.key,
-.layer-Default .keypos-22 rect.key { fill: #1a3a3a; stroke: #40a0a0; }
+
+/* auto-generated combo key highlighting */
+    /* Caps Word (F + J) */
+    .layer-Default .keypos-16 rect.key,
+    .layer-Default .keypos-19 rect.key { fill: #4a3a1a; stroke: #c89b40; }
+    /* ⌃B Tmux (A + ;) */
+    .layer-Default .keypos-13 rect.key,
+    .layer-Default .keypos-22 rect.key { fill: #1a3a3a; stroke: #40a0a0; }
 </style>
 <g transform="translate(30, 0)" class="layer-Default">
 <text x="0" y="28" class="label" id="Default">Default</text>
@@ -404,10 +405,10 @@ text.label { stroke: none; }
 </g>
 </g>
 <g class="combo-legend" transform="translate(30, 370)">
-  <rect rx="4" ry="4" x="0" y="8" width="180" height="26" fill="#4a3a1a" stroke="#c89b40" stroke-width="1"/>
-  <text x="90" y="21" text-anchor="middle" dominant-baseline="middle" fill="#e8c860" font-size="12px" font-family="SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace">F + J → Caps Word</text>
-  <rect rx="4" ry="4" x="200" y="8" width="200" height="26" fill="#1a3a3a" stroke="#40a0a0" stroke-width="1"/>
-  <text x="300" y="21" text-anchor="middle" dominant-baseline="middle" fill="#60d0c8" font-size="12px" font-family="SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace">A + ; → ⌃B Tmux Leader</text>
+  <rect rx="4" ry="4" x="0" y="8" width="200" height="26" fill="#4a3a1a" stroke="#c89b40" stroke-width="1"/>
+  <text x="100" y="21" text-anchor="middle" dominant-baseline="middle" fill="#e8c860" font-size="12px" font-family="SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace">F + J → Caps Word</text>
+  <rect rx="4" ry="4" x="220" y="8" width="200" height="26" fill="#1a3a3a" stroke="#40a0a0" stroke-width="1"/>
+  <text x="320" y="21" text-anchor="middle" dominant-baseline="middle" fill="#60d0c8" font-size="12px" font-family="SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace">A + ; → ⌃B Tmux</text>
 </g>
 <g transform="translate(30, 431)" class="layer-Symbol">
 <text x="0" y="28" class="label" id="Symbol">Symbol</text>

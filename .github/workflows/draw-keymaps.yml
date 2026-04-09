@@ -39,7 +39,7 @@ jobs:
             > keymap-drawer/hillside_view.svg
 
       - name: Add combo legend
-        run: ./scripts/add-combo-legend.sh keymap-drawer/hillside_view.svg
+        run: python3 scripts/add-combo-legend.py keymap-drawer/hillside_view.yaml keymap-drawer/hillside_view.svg
 
       - name: Commit updated images
         run: |
